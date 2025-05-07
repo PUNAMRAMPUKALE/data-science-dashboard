@@ -1,4 +1,3 @@
-
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -156,6 +155,9 @@ def update_table(selected_genre, page_current, page_size):
     filtered = filtered.dropna()
     paginated = filtered.iloc[page_current*page_size:(page_current+1)*page_size]
     return paginated.to_dict("records"), [{"name": i, "id": i} for i in paginated.columns]
+
+# Add this line so Render can access the app
+server = app.server
 
 if __name__ == '__main__':
     app.run(debug=True)
