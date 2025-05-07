@@ -3,6 +3,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from dash import Dash, html, dcc, Input, Output, dash_table
 
+
 # Load data
 movies = pd.read_csv('movies.csv')
 ratings = pd.read_csv('ratings.csv')
